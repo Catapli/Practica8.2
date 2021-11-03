@@ -1,0 +1,130 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BatoiPOP Homepage</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" id="home" href="#!">Home</a></li>
+                        <li  class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mostra</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="lista">
+                                <li><a class="dropdown-item" href="#">Tots els Productes</a></li>
+                                <li><a class="dropdown-divider" href="#"></li>
+                                <li><a class="dropdown-item" href="#">Mes Populars</a></li>
+                                <li ><a class="dropdown-item" href="#">Noves adquisicions</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" id="newCar"><a class="nav-link active" aria-current="page" href="#!">Nuevo Coche</a></li>
+                        
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi bi-person"></i>
+                            Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-1">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Batoi POP</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">La teu tenda de segona ma</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5" id="productos" >
+            <div class="container px-4 px-lg-5 mt-5">
+                <div id="products" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <!-- Aquí los productos -->
+                   
+                </div>
+            </div>
+        </section>
+        <form action="#" id="formulario" name="formulario" class="hide" novalidate>
+            <div class="form-group">
+                <label for="name">Nombre Vehículo</label><br>
+                <input id="name" type="text" size="20" required minlength="10" maxlength="30"><br>
+                <span id="name" class="error"></span>
+            </div>
+            <div>
+                <label for="originalPrice">Precio Original</label><br>
+                <input id="originalPrice" type="number" size="20" required>
+                <span id="originalPrice" class="error"></span><br>
+            </div>
+            <div>
+                <label for="discountPrice">Precio Descuento</label><br>
+                <input id="discountPrice" type="number" size="20">
+                <span id="discountPrice" class="error"></span><br>
+            </div>
+            <div>
+                <label for="stars">Estrellas</label><br>
+                <input id="stars" type="number" size="20" min="1" max="5" required>
+                <span id="stars" class="error"></span><br>
+            </div>
+            <div>
+                <label for="km">Kilometros</label><br>
+                <input id="km" type="text" required size="20">
+                <span id="km" class="error"></span><br>
+            </div>
+            <div>
+                <label for="fuel">Combustible</label><span id="fuel" class="error"></span>
+                <select required id="opciones">
+                    <option>Selecciona una opcion</option>
+                </select>
+                
+            </div>
+            <div>
+                <label for="cambio">Cambio de Marchas Manual:</label>
+                <div>
+                    <input required type="radio" id="cambio" checked name="manualgear" value="true">
+                    <label for="cambio">Si</label>
+                    
+                </div>
+                <div>
+                    <input type="radio" id="cambio" name="manualgear" value="true">
+                    <label for="cambio">No</label>
+                    <span id="cambio" class="error"></span>
+                </div>
+            </div>
+            <div>
+                <label for="foto">Escoger Foto</label>
+                <input type="file" id="foto" required> <span id="foto" class="error"></span>
+            </div>
+            <div>
+                <label for="acept" >Acepta nuestras políticas</label>
+                <input type="checkbox" id="acept" required><span id="acept" class="error"></span>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Batoi Website 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="datos.js"></script>
+        <script src="src/index.js"></script>
+    </body>
+</html>
